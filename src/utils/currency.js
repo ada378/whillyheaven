@@ -1,0 +1,12 @@
+/**
+ * Format a number as Indian Rupees.
+ * Prices in listings.js are already in INR — no conversion needed.
+ */
+export function formatRupees(value) {
+  const amount = Number(value) || 0;
+  return new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0,
+  }).format(amount);
+}
