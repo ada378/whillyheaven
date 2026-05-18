@@ -34,7 +34,7 @@ function HomeLayout() {
     <>
       <Navbar />
       <CategoryFilter selected={selectedCategory} onSelect={setSelectedCategory} />
-      <main className="max-w-7xl mx-auto px-6 py-6">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-6 bg-gold-pale min-h-screen">
         <HomePage selectedCategory={selectedCategory} />
       </main>
       <ToastContainer />
@@ -47,7 +47,7 @@ function DefaultLayout() {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="bg-gold-pale min-h-screen">
         <Outlet />
       </main>
       <ToastContainer />
